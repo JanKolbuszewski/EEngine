@@ -1,17 +1,18 @@
 package core;
 
 public class GameObjectComponent {
-mParent;
+GameObject mParent;
 
 void GameObjectComponent() {
 	
 }
 
-init(){
+void init(){
 	
 }
-destroy(){
-	
+int destroy(){
+
+	return 0;
 }
 
 }
