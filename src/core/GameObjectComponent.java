@@ -1,18 +1,7 @@
 package core;
 
-public class GameObjectComponent {
-GameObject mParent;
-
-void GameObjectComponent() {
-	
-}
-
-void init(){
-	
-}
-int destroy(){
-
-	return 0;
-}
-
+public interface GameObjectComponent {
+void GameObjectComponent(int id);
+void update();
+int destroy();
 }
