@@ -45,24 +45,24 @@ public class GameObject {
 		{
 			kill();
 		}
-		else if(isPhysicsComponent) 
+		if(isPhysicsComponent) 
 		{
 			PhysicsComponent.update();
 		}
-		else if(isInputComponent) 
+		if(isInputComponent) 
 		{
 			inputComponent.update();
 		}
-		else if(isSoundComponent) 
+		if(isSoundComponent) 
 		{
-			addSoundComponent.update();
+			SoundComponent.update();
 		}
-		else if(isGraphicComponent) 
+		if(isGraphicComponent) 
 		{
-			addGraphicComponent.update();
+			GraphicComponent.update();
 		}
 	}
-	//adding components
+	//adding components ex: ball.addPhysicsComponentO(parameters);
 	void addPhysicsComponent() {
 		
 	}
