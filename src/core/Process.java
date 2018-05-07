@@ -10,32 +10,37 @@ boolean mIsAttached = false;
 boolean mIsInitialised = false;
 int mNext = 987654321;
 
-ArrayList<GameObject> ObjectList = new ArrayList<GameObject>();
+static ArrayList<GameObject> ObjectList = new ArrayList<GameObject>();
 
-void update(){
+void update()
+{
 	
-	for(1) {
+	for(1) 
+	{
 		
 		
 	}
 	
 }
+static GameObject setGameObject(long life_time,String name)
+{
+	
+	
+	GameObject object = new GameObject(life_time,name);
+	ObjectList.add(object);
+	
+	return object;
+}
 
-void init() {
+public void xd() {
+	GameObject ball = Process.setGameObject(10000,"xd");
+	
+	
 	
 }
 
-void destroy() {
-	
-}
-
-int setAttached(){
-	
-	
-	return 0;
-}
-
-void kill(){
+void kill()
+{
 	
 }
 
