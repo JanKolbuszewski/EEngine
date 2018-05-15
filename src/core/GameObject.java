@@ -51,7 +51,7 @@ public class GameObject {
 		}
 		if(isInputComponent) 
 		{
-			inputComponent.update();
+			InputComponent.update();
 		}
 		if(isSoundComponent) 
 		{
@@ -64,16 +64,18 @@ public class GameObject {
 	}
 	//adding components ex: ball.addPhysicsComponentO(parameters);
 	void addPhysicsComponent() {
+		new PhysicsComponent();
+		isPhysicsComponent  = true;
 		
 	}
 	void addInputComponent() {
-		
+		isInputComponent  = true;
 	}
 	void addSoundComponent() {
-		
+		isSoundComponent  = true;
 	}
 	void addGraphicComponent() {
-		
+		isGraphicComponent  = true;
 	}
 
 }

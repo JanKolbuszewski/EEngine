@@ -1,6 +1,6 @@
 package core;
 
-public class PhysicsComponent {
+public class GraphicComponent {
 	void update(){
 		
 	}

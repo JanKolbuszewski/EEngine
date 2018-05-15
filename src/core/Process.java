@@ -2,9 +2,6 @@ package core;
 
 import java.util.ArrayList;
 
-import xd.GameObject;
-import xd.Main;
-
 public class Process {
 	static boolean mKill = false;
 	boolean mActive = false;

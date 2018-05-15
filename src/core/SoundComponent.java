@@ -1,8 +1,8 @@
 package core;
 
-public class PhysicsComponent {
+public class SoundComponent {
 	void update(){
 		
 	}
-	
+
 }
