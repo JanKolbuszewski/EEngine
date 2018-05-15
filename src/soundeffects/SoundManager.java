@@ -1,5 +1,6 @@
 package soundeffects;
 /*
+
 import java.util.ArrayList;
 
 public abstract class SoundManager {

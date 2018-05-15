@@ -7,13 +7,13 @@ public class Main {
 		
 		Process xdi = new core.Process();
 		
-		
-
 		GameObject kulka = xdi.setGameObject(10000,"kulka",true,false,false,false);
 		
 		for(GameObject G : Process.ObjectList)
 		{
+			GlobalInfo.reportNow(G);
 			G.update();
+			GlobalInfo.reportNow(G);
 		}
 		
 	}
