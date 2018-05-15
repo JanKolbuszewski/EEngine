@@ -8,7 +8,7 @@ public class PhysicsComponent {
 	
 	
 	void update(){
-		
+		System.out.println("reeeeeeeeee");
 	}
 	
 }

@@ -5,11 +5,16 @@ public class Main {
 	public static void main(String[] args) 
 	{
 		
-		core.Process xd = new core.Process();
+		Process xdi = new core.Process();
 		
 		
 
-		core.GameObject kulka = new xd.setGameObject(10000,"kulka",true,false,false,false);
+		GameObject kulka = xdi.setGameObject(10000,"kulka",true,false,false,false);
+		
+		for(GameObject G : Process.ObjectList)
+		{
+			G.update();
+		}
 		
 	}
 
