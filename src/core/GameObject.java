@@ -16,17 +16,37 @@ public class GameObject {
 	boolean isSoundComponent  = false;
 	boolean isGraphicComponent  = false;
 	
+	PhysicsComponent physix = new PhysicsComponent();
+	InputComponent input = new InputComponent();
+	SoundComponent sound = new SoundComponent();
+	GraphicComponent graphic = new GraphicComponent();
+	
+	//position
+	int x = 0;
+	int y = 0;
+	
 	long mTimeLived() {
 		long time = mLifeStart - System.nanoTime();
 		return time;
 	}
 	
-	public GameObject(long life_time,String name)
+	public GameObject(long life_time, String name, boolean isPhysicsComponent1, boolean isInputComponent1 ,boolean isSoundComponent1  ,boolean isGraphicComponent1)
 	{
 		mLifeTime = life_time;
 		mID = id_source;
 		id_source ++;
 		this.name = name;
+		
+		this.isPhysicsComponent = isPhysicsComponent1;
+		this.isInputComponent = isInputComponent1;
+		this.isSoundComponent = isSoundComponent1;
+		this.isGraphicComponent = isGraphicComponent1;
+	}
+	
+	void setPosition(int x, int y) 
+	{
+		this.x = x;
+		this.y = y;
 	}
 	
 	void kill() 
@@ -40,31 +60,37 @@ public class GameObject {
 		if(mLifeTime<mTimeLived()) 
 		{
 			kill();
+			return;
 		}
 		else if(Process.mKill)
 		{
 			kill();
+			return;
 		}
+		
 		if(isPhysicsComponent) 
 		{
-			PhysicsComponent.update();
+			physix.update();
 		}
 		if(isInputComponent) 
 		{
-			InputComponent.update();
+			input.update();
 		}
 		if(isSoundComponent) 
 		{
-			SoundComponent.update();
+			sound.update();
 		}
 		if(isGraphicComponent) 
 		{
-			GraphicComponent.update();
+			graphic.update();
 		}
+		
 	}
-	//adding components ex: ball.addPhysicsComponentO(parameters);
+	
+	/*
+	adding components ex: ball.addPhysicsComponentO(parameters);
 	void addPhysicsComponent() {
-		new PhysicsComponent();
+		PhysicsComponent physix = new PhysicsComponent();
 		isPhysicsComponent  = true;
 		
 	}
@@ -77,5 +103,6 @@ public class GameObject {
 	void addGraphicComponent() {
 		isGraphicComponent  = true;
 	}
+	 */
 
 }

@@ -1,4 +1,5 @@
 package soundeffects;
+/*
 
 import javafx.scene.media.AudioClip;
 import java.applet.Applet;
@@ -7,7 +8,7 @@ import java.net.URL;
 public class Sound {
     private static Sound staticSound=new Sound();
     public String name;
-    public AudioClip sound;
+   public AudioClip sound;
     private Sound(){}
  
     public Sound(String name, URL url){
@@ -45,3 +46,4 @@ public class Sound {
         return staticSound.getClass().getResource(fileName);
     }
 }
+*/

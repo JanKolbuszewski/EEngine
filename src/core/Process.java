@@ -13,7 +13,7 @@ public class Process {
 	// object list
 	static ArrayList<GameObject> ObjectList = new ArrayList<GameObject>();
 	// updating array list
-	void update()
+	public void update()
 	{
 		for(GameObject G : ObjectList)
 		{
@@ -30,9 +30,9 @@ public class Process {
 	}
 	
 	// create object ex: (creting ball object living 100sec) "GameObject ball = Main.setGameObject(100000,"ball");"
-	static GameObject setGameObject(long life_time,String name)
+	static GameObject setGameObject(long life_time, String name, boolean isPhysicsComponent1, boolean isInputComponent1 ,boolean isSoundComponent1  ,boolean isGraphicComponent1)
 	{
-		GameObject object = new GameObject(life_time,name);
+		GameObject object = new GameObject(life_time,name, isPhysicsComponent1, isInputComponent1, isSoundComponent1, isGraphicComponent1);
 		ObjectList.add(object);
 		return object;
 	}
