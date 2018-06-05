@@ -53,6 +53,32 @@ public class GlobalInfo {
 		String sc = go.isSoundComponent ? "SC " : "";
 		System.out.println(gc + ic + phc + sc);
 	}
+	
+	public static void reportPositionIterable(PhysicsObject pho, Integer time)
+	{
+		if (pho == null)
+		{
+			System.out.println("No object to iterable report");
+			return;
+		}	
+		Thread thr = new Thread(new Runnable()
+		{			
+			@Override
+			public void run() {
+				while (true)
+				{
+					System.out.println("X: " + pho.getX() + "; Y: " + pho.getY());
+					try {
+						Thread.sleep(time);
+					} catch (InterruptedException e) {
+						break;
+					}
+				}
+				
+			}
+		});
+		thr.start();
+	}
 /*
 	public static void reportNow(Sound snd)
 	{

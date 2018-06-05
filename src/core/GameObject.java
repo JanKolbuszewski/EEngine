@@ -16,10 +16,11 @@ public class GameObject {
 	boolean isSoundComponent  = false;
 	boolean isGraphicComponent  = false;
 	
-	PhysicsComponent physix = new PhysicsComponent();
-	InputComponent input = new InputComponent();
-	SoundComponent sound = new SoundComponent();
-	GraphicComponent graphic = new GraphicComponent();
+	PhysicsObject physix;
+	InputComponent input; 
+	SoundComponent sound; 
+	GraphicComponent graphic;
+	
 	
 	//position
 	int x = 0;
@@ -54,7 +55,7 @@ public class GameObject {
 		//kill
 	}
 	//updating objects
-	void update() 
+	public void update() 
 	{
 		
 		if(mLifeTime<mTimeLived()) 
@@ -70,7 +71,7 @@ public class GameObject {
 		
 		if(isPhysicsComponent) 
 		{
-			physix.update();
+			//physix.update();
 		}
 		if(isInputComponent) 
 		{
